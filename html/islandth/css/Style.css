@@ -1,0 +1,141 @@
+@import url('../css/fonts.css');
+
+html, body{
+    margin:0%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+*{
+    color: #652672;
+}
+
+:root{
+    /* theme colors */
+--text-gray: #485659;
+--text-light: #ffffff;
+--bg-color: ##ede6d3;
+--white: #fff;
+--seaco: #60a5bb;
+/* gradient color*/
+--sea: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+
+    /* theme font-family*/
+    --Akshar: 'Akshar', cursive;
+    --Poppin: 'Popping', cursive;
+    --Abold: 'Abold', cursive;
+}
+
+/* Global Classes */
+a{
+    text-decoration: none;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+ul{
+    list-style-type: none ;
+}
+/* -----------navbar------------ */
+.nav{
+    background:rgb(255, 255, 255);
+    padding: 0 2rem;
+    height: 0rem;
+    min-height: 10vh;
+    overflow: hidden;
+
+}
+
+.nav .nav-menu{
+    justify-content: space-between;
+}
+
+.nav .toggle-collapse{
+    position: absolute;
+    top:0%;
+    width: 90%;
+    cursor:pointer;
+    display: none;
+}
+
+.nav .toggle-collapse .toggle-icons{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.7rem 0;
+}
+
+.nav .toggle-collapse .toggle-icons i{
+    font-size: 1.4rem;
+    color: var(--text-gray);
+}
+
+.collapse{
+    height: 50rem;
+}
+
+.nav .nav-items{
+    list-style-type: none;
+    display: flex;
+    margin :0;
+    
+
+}
+
+.nav .nav-items .nav-link{
+    padding: 1.6rem 1rem;
+    font-size: 1.1rem;
+    position: relative;
+    font-size: 1.6rem;
+    font-family: var(--Akshar);
+ 
+}
+
+
+
+
+.nav .nav-items .nav-link:hover{
+background-color: var(--seaco);
+
+}
+.nav .nav-items .nav-link:hover a{
+    color: var(--text-light);
+}
+
+
+.nav .nav-brand a {
+    font-size: 1.8rem;
+    padding: 1rem 0;
+    display: block;
+    font-family: var(--Abold);
+}
+
+.nav .social {
+    padding: 1.4rem 0;
+position: relative;
+}
+
+.nav .social i{
+    padding: 0.3rem;
+}
+
+.nav .social i:hover{
+    color: var(--seaco);
+}
+/* -----+++------navbar-----+++------- */
+
+/* Viewport less then or equal to 750px*/
+@media only screen and (max-width: 750px){
+    .nav .nav-menu, .nav .nav-items{
+        flex-direction: column;
+    }
+    .nav .toggle-collapse{
+        display: initial;
+    }
+}
+/* Viewport less then or equal to 750px*/
+
